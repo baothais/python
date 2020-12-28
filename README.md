@@ -1,1 +1,1 @@
-# 1 vài bài tập python tự 
+# 1 vài bài tập python tự học 
