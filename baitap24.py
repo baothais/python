@@ -7,6 +7,7 @@ class Mang2Chieu:
         print('2. In mang 2 chieu')
         print('3. Các phần tử trên mỗi dòng được sắp xếp theo thứ tự giảm dần.')
         print('4. Các dòng được sắp xếp lại theo thứ tự tăng dần của tổng các phần tử trên mỗi dòng')
+        print('0. Thoat chuong trinh')
         print('==============================================')
     def nhapMang2Chieu(self):
         m=int(input('Nhap so hang: '))
@@ -24,11 +25,16 @@ class Mang2Chieu:
     def sxGiamDan(self):
         for i in range(len(self.list_value)):
             self.list_value[i].sort(reverse=True)
-            print('Thu tu giam dan cua dong thu {} la: {}'.format(i+1, ('->').join(list(map(str, self.list_value[i])))))      
+            print('Thu tu giam dan cac phan tu cua dong thu {} la: {}'.format(i+1, ('->').join(list(map(str, self.list_value[i])))))      
     def sxTangDan(self):
+        l=[]
         for i in range(len(self.list_value)):
             s=sum(self.list_value[i])
-        print(s)
+            l.append(s)
+        l.sort()
+        for i in range(len(l)):
+            print('Tong cac phan tu cua dong thu {} la: {}'.format(i+1, l[i]))
+
 if __name__=='__main__':
     m = Mang2Chieu()
     m.showMenu()
